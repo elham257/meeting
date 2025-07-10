@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Schedule Meeting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 50px;
+      text-align: center;
+    }
+    input {
+      width: 60%;
+      padding: 12px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 24px;
+      background: #0b3d91;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #062a63;
+    }
+  </style>
+</head>
+<body>
+  <h2>Set Your Meeting Time</h2>
+  <input type="datetime-local" id="meetingTime" />
+  <br />
+  <button onclick="saveMeeting()">Schedule Meeting</button>
+
+  <script>
+    function saveMeeting() {
+      const time = document.getElementById("meetingTime").value;
+      if (time) {
+        localStorage.setItem("meetingTime", time);
+        window.location.href = "upload.html";
+      } else {
+        alert("Please choose a date and time");
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+

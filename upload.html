@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Upload Video & Join</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f4f4f4;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background: #0b3d91;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #062a63;
+    }
+    video {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+    .custom-file-upload {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #0b3d91;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .custom-file-upload:hover {
+      background-color: #062a63;
+    }
+    #zoomJoinBtn button {
+      background-color: green;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Join Your Meeting</h2>
+
+    <!-- إدخال لينك الاجتماع -->
+    <input type="text" id="meetingLink" placeholder="Zoom Link or Meeting ID" />
+
+    <!-- زرار رفع الفيديو -->
+    <label for="videoUpload" class="custom-file-upload">🎥 Upload Reaction Video</label>
+    <input type="file" id="videoUpload" accept="video/*" style="display:none;" />
+
+    <!-- عرض الفيديو -->
+    <video id="preview" controls loop autoplay muted></video>
+
+    <!-- إدخال التاريخ والوقت -->
+    <label>Start Date:</label>
+    <input type="date" id="startDate" />
+    <label>Start Time:</label>
+    <input type="time" id="startTime" />
+
+    <!-- زر تشغيل البروكسي -->
+    <button onclick="startSimulation()">Start Proxy</button>
+
+    <!-- زر فتح اللينك -->
+    <a id="zoomJoinBtn" href="#" target="_blank">
+      <button>🔗 Join Zoom Meeting</button>
+    </a>
+  </div>
+
+  <script>
+    const video = document.getElementById("preview");
+
+    // تشغيل الفيديو بعد الرفع
+    document.getElementById("videoUpload").addEventListener("change", function (e) {
+      const file = e.target.files[0];
+      const url = URL.createObjectURL(file);
+      video.src = url;
+      video.load();
+      video.play();
+    });
+
+    // حفظ البيانات وتشغيل الزر
+    function startSimulation() {
+      const link = document.getElementById("meetingLink").value;
+      const date = document.getElementById("startDate").value;
+      const time = document.getElementById("startTime").value;
+
+      if (link && date && time) {
+        document.getElementById("zoomJoinBtn").href = link;
+        alert("Meeting ready. You can now click 'Join Zoom Meeting' below.");
+      } else {
+        alert("Please fill all fields.");
+      }
+    }
+  </script>
+</body>
+</html>
+
