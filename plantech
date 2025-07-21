@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLANTECH – Smart Irrigation System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fdf9;
+      color: #1a3e2f;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      width: 60px;
+    }
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #2e7d32;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #c8e6c9;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .lang-switch {
+      margin-top: 15px;
+    }
+    button {
+      padding: 8px 16px;
+      border: none;
+      background-color: #1a3e2f;
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .qr-code {
+      margin-top: 20px;
+    }
+    .logo {
+  width: 100px; /* كبّري الحجم حسب ما تحبي */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Green_and_Beige_Classic_Elegant_Nature_Foundation_Logo-removebg-preview.png" alt="PLANTECH Logo" class="logo">
+  
+
+  <h1>PLANTECH</h1>
+  <p>Think green .Grow smart</p>
+</header>
+
+<div class="section" id="home">
+  <h2>Why PLANTECH?</h2>
+  <p>We help you water your home plants automatically using real-time moisture sensors and a mini pump – smart, eco-friendly, and easy to use.</p>
+</div>
+
+<div class="section" id="features">
+  <h2>Features</h2>
+  <div class="features">
+    <div class="card">
+      <h3>🌱 Auto Watering</h3>
+      <p>Moisture sensor detects dryness and activates the pump.</p>
+    </div>
+    <div class="card">
+      <h3>🔋 Powered by Power Bank</h3>
+      <p>No need for wiring. Easy and portable.</p>
+    </div>
+    <div class="card">
+      <h3>📱 Mobile App</h3>
+      <p>Monitor and control watering from your phone.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@plantech.com</p>
+  <p>Instagram: @plantech_eg</p>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 PLANTECH. All rights reserved.</p>
+  <div class="lang-switch">
+    <button onclick="window.location.href='index-ar.html'">العربية</button>
+  </div>
+</footer>
+
+</body>
+</html>
+
